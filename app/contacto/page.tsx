@@ -1,14 +1,16 @@
-import { Mail, MapPin, Linkedin, Instagram } from "lucide-react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
+import { Mail, MapPin, Linkedin, Instagram } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function ContactoPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold mb-2">Contacto</h1>
-      <p className="text-xl text-gray-600 mb-8">Estamos aquí para ayudarte con cualquier consulta sobre hackathons</p>
+      <p className="text-xl text-gray-600 mb-8">
+        Estamos aquí para ayudarte con cualquier consulta sobre hackathons
+      </p>
 
       <div className="grid md:grid-cols-2 gap-12">
         <div>
@@ -17,13 +19,19 @@ export default function ContactoPage() {
           <form className="space-y-6">
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               <div>
-                <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="nombre"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Nombre
                 </label>
                 <Input id="nombre" name="nombre" type="text" required />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Email
                 </label>
                 <Input id="email" name="email" type="email" required />
@@ -31,14 +39,20 @@ export default function ContactoPage() {
             </div>
 
             <div>
-              <label htmlFor="asunto" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="asunto"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
                 Asunto
               </label>
               <Input id="asunto" name="asunto" type="text" required />
             </div>
 
             <div>
-              <label htmlFor="mensaje" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="mensaje"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
                 Mensaje
               </label>
               <Textarea id="mensaje" name="mensaje" rows={5} required />
@@ -66,7 +80,7 @@ export default function ContactoPage() {
               <MapPin className="w-6 h-6 text-blue-600" />
               <div>
                 <h3 className="font-medium">Ubicación</h3>
-                <p className="text-gray-600">Madrid, España</p>
+                <p className="text-gray-600">Encarnación, Itapúa</p>
               </div>
             </div>
 
@@ -83,7 +97,7 @@ export default function ContactoPage() {
                   <span className="sr-only">LinkedIn</span>
                 </Link>
                 <Link
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/ferreiraadrian/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800"
@@ -97,5 +111,5 @@ export default function ContactoPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

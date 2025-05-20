@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Linkedin, Instagram, Mail, Phone } from "lucide-react"
+import Link from "next/link";
+import { Linkedin, Instagram, Mail, Phone } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -9,7 +9,8 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Hackathons Paraguay</h3>
             <p className="text-gray-300 mb-4">
-              La plataforma para descubrir y publicar los mejores hackathons en Paraguay.
+              La plataforma para descubrir y publicar los mejores hackathons en
+              Paraguay.
             </p>
             <div className="flex space-x-4">
               <Link
@@ -22,7 +23,7 @@ export default function Footer() {
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/ferreiraadrian/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white"
@@ -42,22 +43,34 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/calendario" className="text-gray-300 hover:text-white">
+                <Link
+                  href="/calendario"
+                  className="text-gray-300 hover:text-white"
+                >
                   Calendario
                 </Link>
               </li>
               <li>
-                <Link href="/publicar-hackathon" className="text-gray-300 hover:text-white">
+                <Link
+                  href="/publicar-hackathon"
+                  className="text-gray-300 hover:text-white"
+                >
                   Publicar hackathon
                 </Link>
               </li>
               <li>
-                <Link href="/organizar-hackathon" className="text-gray-300 hover:text-white">
+                <Link
+                  href="/organizar-hackathon"
+                  className="text-gray-300 hover:text-white"
+                >
                   Organizar hackathon
                 </Link>
               </li>
               <li>
-                <Link href="/contacto" className="text-gray-300 hover:text-white">
+                <Link
+                  href="/contacto"
+                  className="text-gray-300 hover:text-white"
+                >
                   Contacto
                 </Link>
               </li>
@@ -73,14 +86,17 @@ export default function Footer() {
               </li>
               <li className="flex items-center text-gray-300">
                 <Phone size={16} className="mr-2" />
-                <span>+34 600 000 000</span>
+                <span>+595 985609659</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Hackathons Paraguay. Todos los derechos reservados.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Hackathons Paraguay. Todos los
+            derechos reservados.
+          </p>
           <p className="mt-2">
             Desarrollado por{" "}
             <Link
@@ -95,5 +111,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

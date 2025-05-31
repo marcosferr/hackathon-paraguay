@@ -1,24 +1,25 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import { AdminAuthProvider } from "@/hooks/use-admin-auth"
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import { AdminAuthProvider } from "@/hooks/use-admin-auth";
+import { Toaster } from "sonner";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 // Actualizar el título y la descripción
 export const metadata: Metadata = {
   title: "Hackathons Paraguay",
   description: "Plataforma para descubrir y publicar hackathons en Paraguay",
-    generator: 'v0.dev'
-}
+  generator: "v0.dev",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="es">
@@ -29,8 +30,9 @@ export default function RootLayout({
             <main className="flex-grow">{children}</main>
             <Footer />
           </div>
+          <Toaster richColors position="top-center" />
         </AdminAuthProvider>
       </body>
     </html>
-  )
+  );
 }

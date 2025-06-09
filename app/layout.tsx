@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { AdminAuthProvider } from "@/hooks/use-admin-auth";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
             <Footer />
           </div>
           <Toaster richColors position="top-center" />
+          <Analytics />
         </AdminAuthProvider>
       </body>
     </html>
